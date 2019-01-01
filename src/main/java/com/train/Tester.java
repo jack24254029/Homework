@@ -9,8 +9,7 @@ public class Tester {
         int ticketsCount = scanner.nextInt();
         System.out.print("How many round-trip tickets: ");
         int roundTripCount = scanner.nextInt();
-        int singleTripCount = ticketsCount - roundTripCount;
-        Ticket ticket = new Ticket(singleTripCount, roundTripCount);
+        JavaTicket ticket = new JavaTicket(ticketsCount, roundTripCount);
         ticket.calculate();
     }
 }

@@ -1,17 +1,17 @@
 package com.train;
 
-public class Ticket {
+public class JavaTicket {
     private final int singleTripTicketPrice = 1000;
     private final float roundTripTicketPrice = singleTripTicketPrice * 2 * .9f;
-    private int singleTripCount, roundTripCount;
+    private int singleTripCount, roundTripCount, totalTicketCount;
 
-    public Ticket(int singleTripCount, int roundTripCount) {
-        this.singleTripCount = singleTripCount;
+    public JavaTicket(int totalTicketCount, int roundTripCount) {
         this.roundTripCount = roundTripCount;
+        this.totalTicketCount = totalTicketCount;
+        singleTripCount = totalTicketCount - roundTripCount;
     }
 
     public void calculate() {
-        int totalTicketCount = singleTripCount + roundTripCount;
         int total = (int) (singleTripCount * singleTripTicketPrice + roundTripCount * roundTripTicketPrice);
         System.out.println("Total tickets: " + totalTicketCount + "\n" +
                 "Round-trip: " + roundTripCount + "\n" +
